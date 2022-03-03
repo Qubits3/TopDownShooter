@@ -52,6 +52,12 @@ namespace Characters
             pooledObject.SetActive(true);
         }
 
+        protected virtual void ApplyDamage(CharacterBase enemy)
+        {
+            var health = enemy.Health - AttackPower;
+            enemy.SetHealth(health);
+        }
+
         protected abstract void Move();
     
         protected abstract void Attack();

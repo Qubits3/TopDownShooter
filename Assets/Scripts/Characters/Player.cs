@@ -6,15 +6,16 @@ namespace Characters
     {
         protected override void Start()
         {
-            SetSpeed(10.0f);
             base.Start();
+            
+            SetSpeed(10.0f);
         }
 
         protected override void Update()
         {
-            RotateTowardsMousePosition();
-
             base.Update();
+            
+            RotateTowardsMousePosition();
         }
 
         protected override void Move()
